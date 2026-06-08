@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Murat Koçak Lojistik – İletişim</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(145deg, #0d2260 0%, #1a3a8c 50%, #1e4db0 100%);
+    font-family: 'Source Sans 3', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+  }
+
+  /* LOGO AREA */
+  .logo-area {
+    text-align: center;
+    margin-bottom: 32px;
+    animation: fadeDown .5s ease both;
+  }
+  .logo-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255,255,255,.08);
+    border: 1.5px solid rgba(255,255,255,.2);
+    border-radius: 16px;
+    padding: 16px 24px;
+    backdrop-filter: blur(8px);
+  }
+  .logo-mk-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    color: #fff;
+    line-height: 1;
+    border: 2.5px solid rgba(255,255,255,.6);
+    padding: 3px 10px;
+    letter-spacing: -1px;
+  }
+  .logo-name {
+    text-align: left;
+  }
+  .logo-name .top {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .logo-name .wave {
+    display: block;
+    margin: 3px 0 2px;
+  }
+  .logo-name .bottom {
+    font-size: 10px;
+    color: rgba(255,255,255,.65);
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+  }
+
+  /* CARD */
+  .card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.3);
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    animation: fadeUp .5s .1s ease both;
+  }
+
+  .card-header {
+    background: linear-gradient(135deg, #1a3a8c, #2a5ac8);
+    padding: 20px 24px 18px;
+    text-align: center;
+  }
+  .card-header h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .card-header p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.75);
+    margin-top: 4px;
+  }
+
+  .actions {
+    padding: 16px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* ACTION BUTTON */
+  .action-btn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #111;
+    border: 1.5px solid #e8edf8;
+    background: #f8f9fd;
+    transition: transform .15s, box-shadow .15s, background .15s;
+    cursor: pointer;
+  }
+  .action-btn:hover, .action-btn:active {
+    background: #eef2fc;
+    box-shadow: 0 4px 16px rgba(26,58,140,.12);
+    transform: translateY(-1px);
+  }
+  .action-btn:active { transform: scale(.98); }
+
+  .icon-wrap {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .icon-call   { background: #e8f0ff; }
+  .icon-wa     { background: #e6f9ee; }
+  .icon-map    { background: #fdecea; }
+  .icon-mail   { background: #fff3e0; }
+
+  .action-text .title {
+    font-weight: 600;
+    font-size: 15px;
+    color: #111;
+    display: block;
+  }
+  .action-text .sub {
+    font-size: 12px;
+    color: #888;
+    display: block;
+    margin-top: 1px;
+  }
+
+  .arrow {
+    margin-left: auto;
+    color: #c0cce8;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255,255,255,.45);
+    animation: fadeUp .5s .25s ease both;
+  }
+
+  @keyframes fadeDown {
+    from { opacity:0; transform: translateY(-18px); }
+    to   { opacity:1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity:0; transform: translateY(18px); }
+    to   { opacity:1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<!-- LOGO -->
+<div class="logo-area">
+  <div class="logo-box">
+    <div class="logo-mk-text">MK</div>
+    <div class="logo-name">
+      <div class="top">Murat Koçak</div>
+      <svg class="wave" width="110" height="10" viewBox="0 0 110 10" fill="none">
+        <path d="M2 5 Q16 1 28 5 Q40 9 52 5 Q64 1 76 5 Q88 9 100 5 Q106 3 110 4"
+              stroke="rgba(255,255,255,0.45)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M2 8 Q16 4 28 8 Q40 12 52 8 Q64 4 76 8 Q88 12 100 8 Q106 6 110 7"
+              stroke="rgba(255,255,255,0.25)" stroke-width="1" fill="none" stroke-linecap="round"/>
+      </svg>
+      <div class="bottom">Lojistik</div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD -->
+<div class="card">
+  <div class="card-header">
+    <h2>Bizimle İletişime Geçin</h2>
+    <p>Size en uygun yöntemi seçin</p>
+  </div>
+
+  <div class="actions">
+
+    <!-- ARA -->
+    <a class="action-btn" href="tel:+905334839269">
+      <div class="icon-wrap icon-call">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="#1a3a8c"/>
+        </svg>
+      </div>
+      <div class="action-text">
+        <span class="title">Ara</span>
+        <span class="sub">0533 483 92 69</span>
+      </div>
+      <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </a>
+
+    <!-- WHATSAPP -->
+    <a class="action-btn" href="https://wa.me/905334839269" target="_blank">
+      <div class="icon-wrap icon-wa">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </div>
+      <div class="action-text">
+        <span class="title">WhatsApp</span>
+        <span class="sub">Mesaj gönder</span>
+      </div>
+      <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </a>
+
+    <!-- KONUM -->
+    <a class="action-btn" href="https://maps.google.com/?q=Horozluhan+Mah+Şüra+Cad+Yeni+Kamyon+Garajı+No:1/A+Selçuklu+Konya" target="_blank">
+      <div class="icon-wrap icon-map">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#e53935"/>
+        </svg>
+      </div>
+      <div class="action-text">
+        <span class="title">Konuma Git</span>
+        <span class="sub">Horozluhan Mah. Selçuklu / Konya</span>
+      </div>
+      <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </a>
+
+    <!-- E-POSTA -->
+    <a class="action-btn" href="mailto:bilgi@muratkocaklojistik.com">
+      <div class="icon-wrap icon-mail">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#f57c00"/>
+        </svg>
+      </div>
+      <div class="action-text">
+        <span class="title">E-posta</span>
+        <span class="sub">bilgi@muratkocaklojistik.com</span>
+      </div>
+      <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </a>
+
+  </div>
+</div>
+
+<div class="footer">
+  Murat Koçak Lojistik &nbsp;·&nbsp; Selçuklu / Konya
+</div>
+
+</body>
+</html>
